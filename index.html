@@ -8,7 +8,26 @@
 		<link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" href="images/logo.png">
-		<title>CIRCLES</title>
+        <title>CIRCLES</title>
+        <!-- This internal CSS styling is only applied to index.html! -->
+        <style>
+            @media (min-width: 768px) {
+                .special-container {
+                    max-width: 75%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }  
+            }
+            @media (max-width: 768px) {
+                .special-container {
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        </style>
     </head>
     
 	<body class="animate__animated animate__fadeIn animate__slow">
@@ -48,7 +67,7 @@
 							  Resources
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="nav-link" href="videos.html">Videos</a>
+								<a class="dropdown-item" href="videos.html">Videos</a>
 							</div>
 						</li>
 						<!-- <li class="nav-item dropdown">
@@ -94,7 +113,7 @@
 		<!------------------------------------------------------>
 		<!------------------------------------------------------>
 		<section id="about">
-            <div class="container">
+            <div class="special-container">
                 <div class="py-5"></div>
                 <div class="row">
                     <div class="col-md-6">
@@ -108,7 +127,6 @@
 						<p>
 							<a href="https://phantomjams.github.io" target="_blank">Prior work on closed-course testing</a> demonstrated that phantom jams can be reduced using autonomous vehicle technologies and specially-designed algorithms. The CIRCLES project seeks to extend this technology to real-world traffic, where reducing these negative traffic effects could provide ≥10% energy savings.
 						</p>
-						
                     </div>
                     <div class="col-md-6 d-flex align-items-center justify-content-center">
                         <figure class="figure">
@@ -123,18 +141,18 @@
                         <figure class="figure">
                             <img src="images/berkeley/flow.gif" class="figure-img img-fluid rounded">
                             <figcaption class="figure-caption">
-                                FLOW uses deep reinforcement learning to produce optimal traffic simulations.
+                                CIRCLES uses deep reinforcement learning to produce optimal traffic simulations.
                                 In this simulation, the autonomous vehicle learned to create a snake for optimal traffic flow.
                             </figcaption>
                         </figure>
                     </div>
                     <div class="col-md-6">
-                        <h1>Research plan</h1>
+                        <h1>Research Plan</h1>
                         <p class="lead text-california-gold">
                            Demonstrate traffic flow and energy savings in the real world.
                         </p>
                         <p>
-                            The ambitious goals of the CIRCLES project will be acheived through a combination of computational development, vehicle technology deployment, and highway infrastructure construction. Novel research is being conducted in all of these areas by an interdisciplinary team across the United States.
+                            The ambitious goals of the CIRCLES project will be achieved through a combination of computational development, vehicle technology deployment, and highway infrastructure construction. Novel research is being conducted in all of these areas by an interdisciplinary team across the United States.
                         </p>
                         <p>
                             Specific major research tasks include: <br>
@@ -218,63 +236,62 @@
                     <hr class="title-hr"/>
                 </h1>
                 <div class="py-3"></div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="images/project/flow2-alt.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">FLOW</h5>
-                                <p class="card-text text-secondary">
-                                    A deep reinforcement learning framework for mixed autonomy traffic.
-                                </p>
-                                <a href="https://flow-project.github.io/" target="_blank" class="btn btn-warning">Learn More</a>
-                            </div>
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="images/project/flow2-alt.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">FLOW</h5>
+                            <p class="card-text text-secondary">
+                                A deep reinforcement learning framework for mixed autonomy traffic.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-link float-right" href="https://flow-project.github.io/" target="_blank">Learn More</a>
                         </div>
                     </div>
-					<div class="col-md-4">
-                        <div class="card">
-                            <img src="images/project/strym_big.png" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Strym</h5>
-                                <p class="card-text text-secondary">
-                                    A Python package for real-time logging, analysis and visualization of vehicle data from CAN bus.
-                                </p>
-                                <a href="https://jmscslgroup.github.io/strym/" target="_blank" class="btn btn-warning">Learn More</a>
-                            </div>
+                    <div class="card">
+                        <img src="images/project/strym_big.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Strym</h5>
+                            <p class="card-text text-secondary">
+                                A Python package for real-time logging, analysis and visualization of vehicle data from CAN bus.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-link float-right" href="https://jmscslgroup.github.io/strym/" target="_blank">Learn More</a>
                         </div>
                     </div>
-                    <!--<div class="col-md-4 mb-3 text-center">
-                        <img class="img-products img-mobile" src="images/undraw/products-ai.svg">
-                        <img class="img-products img-mobile pt-5" src="images/undraw/products-ideas.svg">
-                    </div>-->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="images/vanderbilt/i24motion.png" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">I-24 MOTION</h5>
-                                <p class="card-text text-secondary">
-                                    Interstate camera tracking for high-resolution vehicle trajectory data collection.
-                                </p>
-                                <a href="https://github.com/DerekGloudemans/I24-MOTION-examples" target="_blank" class="btn btn-warning">Learn More</a>
-                            </div>
+                    <div class="card">
+                        <img src="images/vanderbilt/i24motion.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">I-24 MOTION</h5>
+                            <p class="card-text text-secondary">
+                                Interstate camera tracking for high-resolution vehicle trajectory data collection.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-link float-right" href="https://github.com/DerekGloudemans/I24-MOTION-examples" target="_blank">Learn More</a>
                         </div>
                     </div>
-                </div>
-				
-				<br>
-				
-				<div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="images/project/libpanda-grey.png" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Libpanda</h5>
-                                <p class="card-text text-secondary">
-                                    A software library and utilities for interfacing with vehicle hardware systems.
-                                </p>
-                                <a href="https://jmscslgroup.github.io/libpanda/" target="_blank" class="btn btn-warning">Learn More</a>
-                            </div>
+                </div>	
+				<div class="card-deck pt-md-5">
+                    <div class="card">
+                        <img src="images/project/libpanda-grey.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Libpanda</h5>
+                            <p class="card-text text-secondary">
+                                A software library and utilities for interfacing with vehicle hardware systems.
+                            </p>
                         </div>
+                        <div class="card-footer">
+                            <a class="card-link float-right" href="https://jmscslgroup.github.io/libpanda/" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="card bg-light" style="border: 0px">
+                        <!-- Empty card to fill in empty space -->
+                    </div>
+                    <div class="card bg-light" style="border: 0px">
+                        <!-- Empty card to fill in empty space -->
                     </div>
                 </div>
                 <div class="py-5"></div>
