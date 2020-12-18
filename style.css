@@ -31,6 +31,15 @@ body {
     border: 0px;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #FFF;
+    background-color: #FDB515;
+}
+
+.nav-pills .nav-link{
+    color: black;
+}
+
 .rounded-circle {
     width: 125px;
     height: 125px;
@@ -65,13 +74,22 @@ body {
     .rounded-circle {
         width: 100px;
         height: 100px;
-    }    
+    }
+
+    #team-tabs {
+        text-align: center;
+        margin: auto 5vh;
+    }
 }
 
 @media screen and (min-width: 1200px) { 
-    /* For PC Monitors: */
+    /* For PC and Laptop Monitors: */
     #introduction {
         background-repeat: repeat-x;
         background-size: contain;
+    }
+
+    #team {
+        min-height: 760px;
     }
 }
