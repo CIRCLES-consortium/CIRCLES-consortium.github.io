@@ -2,6 +2,13 @@ body {
     font-family: 'Muli', sans-serif;
 }
 
+.center {
+	display:flex;
+	justify-content:center;
+	padding-top: 5px;
+	padding-bottom: 2em;
+}
+
 .dropdown-item:active {
     color: white;
     background-color: #FDB515;
